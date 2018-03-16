@@ -11,5 +11,12 @@ namespace App\DAO;
 
 class ClienteDAO
 {
+    public function inserir($cliente)
+    {
+        $sql = "insert into cliente (id,nome,endereco,cpf,telefone)VALUES (:id, :nome, :endereco, :cpf, :telefone)";
+        try{
+            $i = $this->conexao->prepare($sql);
+        }
+    }
 
 }
