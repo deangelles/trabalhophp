@@ -1,4 +1,7 @@
 
+<?php
+$titulo = "Usúarios";
+include 'cabecalho.php';?>
 <h1>Alterar senha</h1>
 <html>
 <head>
@@ -6,7 +9,7 @@
 </head>
 <body>
 
-<form name="form1" id="form1" action="mudar_senha.php" method="POST">
+<form class="form-inline" action="mudar-senha.php" method="get">
 
 <table border="0" width="100%">
 <tr>
@@ -39,3 +42,4 @@
 </form>
 </body>
 </html>
+<?php include 'rodape.php';?>
