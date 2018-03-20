@@ -16,6 +16,7 @@ $uDAO->verificar();
         $p2->setDescricao($_POST['descricao']);
         $p2->setQuantidade(\App\Helper\Moeda::set($_POST['quantidade']));
         !empty($_POST['valor']) ? $p2->setValor(\App\Helper\Moeda::set($_POST['valor'])): $p2->setValor(null);
+        $p2->setMarca($_POST['marca']);
         !empty($_POST['validade']) ? $p2->setValidade(\App\Helper\Data::set($_POST['validade'])): $p2->setValidade(null);
 
         $p2DAO = new \App\DAO\ProdutoDAO();
@@ -49,6 +50,10 @@ $uDAO->verificar();
         <div class="form-group">
             <label for="valor">Valor</label>
             <input type="text" id="valor" name="valor" class="form-control"value="<?php echo \App\Helper\Moeda::get($resultado['valor']); ?>">
+        </div>
+        <div class="form-group">
+            <label for="marca"><span class="text-danger">*</span> Marca</label>
+            <input type="text" id="marca" name="marca" required autofocus class="form-control"value="<?php echo $resultado['marca']; ?>">
         </div>
         <div class="form-group">
             <label for="validade">Validade</label>

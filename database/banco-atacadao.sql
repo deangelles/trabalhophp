@@ -20,7 +20,7 @@ CREATE TABLE produtos (
   nome VARCHAR (100) NOT NULL,
   endereco VARCHAR (200) NOT NULL,
   cpf VARCHAR (16),
-  telefone INT (14),
+  telefone VARCHAR (20),
   PRIMARY KEY (id)
   );
   insert into usuarios(email,senha) values('admin@gmail.com','21232f297a57a5a743894a0e4a801fc3');

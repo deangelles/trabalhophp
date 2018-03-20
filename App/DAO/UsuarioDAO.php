@@ -27,7 +27,7 @@ class UsuarioDAO extends Conexao
             echo $e->getMessage();
         }
     }
-    public function logooff()
+    public function logoff()
     {
         session_start();
         unset($_SESSION['id']);

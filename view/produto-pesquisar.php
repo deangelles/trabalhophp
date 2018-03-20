@@ -8,7 +8,7 @@ include 'cabecalho.php';?>
         <label for="descricao">Descrição: </label>
     </div>
     <div class="form-group mx-sm-3 mb-2">
-        <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Ex.: Sabão em pó" autofocus>
+        <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Ex.: Cadeira de Escritório Presitende" autofocus>
     </div>
     <button type="submit" class="btn btn-primary mb-2">
         <img src="../assets/images/ic_search_white_24px.svg" alt="Pesquisar">
@@ -44,6 +44,7 @@ if (isset($_GET['msg']) && $_GET ['msg'] == 2)
                 <th>Descrição</th>
                 <th>Quantidade</th>
                 <th>Valor</th>
+                <th>Marca</th>
                 <th>Validade</th>
                 <th></th>
                 <th></th>
@@ -56,6 +57,7 @@ if (isset($_GET['msg']) && $_GET ['msg'] == 2)
                     echo  "<td> {$produto->getDescricao()}</td>";
                     echo  "<td> ".\App\Helper\Moeda::get($produto->getQuantidade())."</td>";
                     echo  "<td> ".\App\Helper\Moeda::get($produto->getValor())."</td>";
+                    echo  "<td> {$produto->getMarca()}</td>";
                     echo  "<td> ".\App\Helper\Data::get($produto->getValidade())."</td>";
                     echo  "<td><a class='btn btn-danger' href='produto-excluir.php?id={$produto->getId()}'>Excluir</a></td>";
                     echo  "<td><a class='btn btn-warning' href='produto-alterar.php?id={$produto->getId ()}'>Alterar</a></td>";
