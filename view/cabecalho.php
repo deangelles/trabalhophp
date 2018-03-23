@@ -20,6 +20,7 @@
             <li class="nav-item"><a href="cliente-pesquisar.php" class="nav-link">| Pesquisar Cliente</a></li>
             <li class="nav-item"><a href="mudar-senha.php" class="nav-link">| Alterar Usúario</a></li>
             <li class="nav-item"><a href="usuario-inserir.php" class="nav-link">| Novo Usúario</a></li>
+
         </ul>
     </div>
 
