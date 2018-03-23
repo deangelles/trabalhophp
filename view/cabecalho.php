@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.css">
@@ -13,11 +14,12 @@
     <a class="navbar-brand" <a HREF="https://deangellescyber.wixsite.com/website" TARGET="_blank" > Sale System </a>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
-            <li class="nav-item"><a href="produto-inserir.php" class="nav-link">Novo Produto</a></li>
-            <li class="nav-item"><a href="produto-pesquisar.php" class="nav-link">Pesquisar Produtos</a></li>
-            <li class="nav-item"><a href="cliente-inserir.php" class="nav-link">Novo Cliente</a></li>
-            <li class="nav-item"><a href="cliente-pesquisar.php" class="nav-link">Pesquisar Cliente</a></li>
-            <li class="nav-item"><a href="mudar-senha.php" class="nav-link">Usúario</a></li>
+            <li class="nav-item"><a href="produto-inserir.php" class="nav-link">| Novo Produto</a></li>
+            <li class="nav-item"><a href="produto-pesquisar.php" class="nav-link">| Pesquisar Produtos</a></li>
+            <li class="nav-item"><a href="cliente-inserir.php" class="nav-link">| Novo Cliente</a></li>
+            <li class="nav-item"><a href="cliente-pesquisar.php" class="nav-link">| Pesquisar Cliente</a></li>
+            <li class="nav-item"><a href="mudar-senha.php" class="nav-link">| Alterar Usúario</a></li>
+            <li class="nav-item"><a href="usuario-inserir.php" class="nav-link">| Novo Usúario</a></li>
         </ul>
     </div>
 

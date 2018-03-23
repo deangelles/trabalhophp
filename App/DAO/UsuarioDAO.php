@@ -27,6 +27,53 @@ class UsuarioDAO extends Conexao
             echo $e->getMessage();
         }
     }
+
+    public function consulta($usuario){
+        $sql = " select * from usuarios where id= :id";
+        try{
+            $p = $this->conexao->prepare($sql);
+            $p->bindValue(":id", $usuario->getId());
+
+            $p->execute();
+            $resultado = $p->fetch();
+
+            return $resultado;
+
+        }catch (\PDOException $e){
+            echo $e->getMessage();
+        }
+
+    }
+    public function alterarUser($usuario){
+        $sql = " update usuarios set email= :email, senha= :senha where id= :id";
+        try{
+            $p = $this->conexao->prepare($sql);
+            $p->bindValue(":email", $usuario->getEmail());
+            $p->bindValue(":senha", \App\Helper\Senha::gerar($usuario->getSenha()));
+            $p->bindValue(":id", $usuario->getId());
+
+            $p->execute();
+            return true;
+
+        }catch (\PDOException $e){
+            echo $e->getMessage();
+        }
+    }
+
+    public function inserir($usuario)
+    {
+        $sql = "insert into usuarios (email,senha)VALUES ( :email, :senha)";
+        try{
+            $in = $this->conexao->prepare($sql);
+            $in->bindValue(":email",$usuario->getEmail());
+            $in->bindValue(":senha",\App\Helper\Senha::gerar($usuario->getSenha()));
+            $in->execute();
+            return true;
+        } catch (\PDOException $exception){
+            echo "<div class='alert alert-danger'>{$exception->getMessage()}</div>";
+        }
+    }
+
     public function logoff()
     {
         session_start();

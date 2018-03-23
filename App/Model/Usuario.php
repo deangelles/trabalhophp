@@ -11,8 +11,25 @@ namespace App\Model;
 
 class Usuario
 {
+    private $id;
     private $email;
     private $senha;
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     /**
      * @return mixed
@@ -45,5 +62,10 @@ class Usuario
     {
         $this->senha = $senha;
     }
+
+
+
+
+
 
 }
