@@ -21,10 +21,20 @@ if ($_POST){
 
     $cDAO = new \App\DAO\ClienteDAO();
     if ($cDAO->inserir($c))
-        echo "<div class='alert alert-success'>Cliente cadastrado com sucesso!</div>";
+        echo "<div id='mensagem' class='alert alert-success'>Cliente cadastrado com sucesso!</div>";
+
 }
 
 ?>
+     <script>
+        setTimeout(function(){
+            desaparecerImagem();}, 3000);
+        function desaparecerImagem(){
+            var mensagem = document.querySelector("#mensagem");
+            mensagem.style.display = "none";
+        }
+
+     </script>
 
     <form action="cliente-inserir.php" method="post">
         <div class="form-group">

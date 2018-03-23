@@ -24,9 +24,9 @@ $uDAO->verificar();
 
 
 if (isset($_GET['msg']) && $_GET ['msg'] == 1)
-    echo "<div class='alert alert-success'>Cliente excluído com sucesso!</div>";
+    echo "<div id ='mensagem' class='alert alert-success'>Cliente excluído com sucesso!</div>";
 if (isset($_GET['msg']) && $_GET ['msg'] == 2)
-    echo "<div class='alert alert-success'>Cliente alterado com sucesso!</div>";
+    echo "<div  id ='mensagem' class='alert alert-success'>Cliente alterado com sucesso!</div>";
 
 $c = new \App\Model\Cliente();
 isset($_GET['nome']) ? $c->setNome($_GET['nome']) : $c->setNome("");
@@ -37,7 +37,15 @@ $clientes = $cDAO->pesquisar($c);
 if (count($clientes) > 0) {
 
     ?>
+    <script>
+        setTimeout(function(){
+            desaparecerImagem();}, 3000);
+        function desaparecerImagem(){
+            var mensagem = document.querySelector("#mensagem");
+            mensagem.style.display = "none";
+        }
 
+    </script>
     <table class='table table-striped table-hover'>
         <tr class='text-center'>
             <th>ID</th>
